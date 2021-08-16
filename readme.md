@@ -1,4 +1,4 @@
-#Gymlog
+# Gymlog
 
 #### about this project このプロジェクトについて
 このプロジェクトはUsui個人による、githubやDocker、herokuといったモダンな開発環境を扱う練習と、健康増進のために筋トレやダイエットの記録ができる実用的なwebアプリを作成するプロジェクトです。
