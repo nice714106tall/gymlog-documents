@@ -14,7 +14,8 @@
 ```php
 public function getHome(){
     return view('home');
-}```
+}
+```
 
 ### ルーティング
 
