@@ -2,7 +2,9 @@
 
 ## Docker関連
 
-- Docker関連
+- 環境構築はLaravel8.xから追加された機能`sail`が便利。phpの設定に悪戦苦闘しmysqlの設定に悪戦苦闘し…という事が無く、一発で完璧な環境が構築でき、本番環境としても十分実用的と思われる。
+- docker for windowsの場合は、[microsoft storeのwsl store](https://aka.ms/wslstore)からWSL2用のUbuntuディストロを入れてDockerに設定しておくと使いやすい。
+- readouble.comのLaravelドキュメントの日本語翻訳版を参考に、インストールスクリプトを実行してsail(docker-composeのラッパー)でupするだけ。
 
 ## Laravel関連
 
@@ -31,10 +33,11 @@ public function getHome(){
 #### 課題
 
 - 各ページで使いまわすための共通デザインテンプレートは別の場所にあると思われるので、**その機能を実現するための用語**を調べ、公式ドキュメントを**検索するための前提知識**が必要。
+    - `@section`と`@yield`
 
 ### ユーザ認証周り
 
-- Laravel Breezeという公式ライブラリでよしなにやってくれる。
+- `Laravel Breeze`という公式ライブラリでよしなにやってくれる。
 
 #### ユーザがログイン済みであるかの判定
 
