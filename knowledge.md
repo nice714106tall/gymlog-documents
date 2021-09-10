@@ -36,9 +36,18 @@ public function getHome(){
 
 - 先ほど作ったコントローラを使用できる状態にする(URLに関連付ける)
 - `routes/web.php`
-- `//use App\Http\Controllers\SomethingController;`
-- `//Route::get('/path-to-page', [SomethingController::class, 'funcName']);`
-- `return view('hoge');`(hoge.blade.phpを表示する) で良い。
+- `use App\Http\Controllers\SomethingController;` ←これ大事。忘れるとclass not foundのエラーになる。
+- `Route::get('/path-to-page', [SomethingController::class, 'funcName']);`
+- 別の書き方
+  ```php
+  //コントローラを使わない方法
+  function () {
+      return view('hoge');
+  });
+  ```
+
+  `Route::get('/path-to-page', 'somethingController@funcName');`
+
 
 ### ページ内容
 
