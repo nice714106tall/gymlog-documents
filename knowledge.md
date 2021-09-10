@@ -8,6 +8,13 @@
 
 ## Laravel関連
 
+### HTTP 500エラーで何も表示されない場合
+- .env が無い場合にエラーが出る
+#### 課題
+- .env でデータベースパスワードを定義すると接続エラーとなる。
+- mysql serverコンテナにパスワードの設定が反映していないため。
+- docker execでmysqlコンテナに入り、手動でパスワード変更する必要があるのか、もしくはenvファイルを適用させる方法があるのか調査が必要。
+
 ### コントローラ作成
 
 - `php artisan make:controller SomethingController`
@@ -23,8 +30,9 @@ public function getHome(){
 
 - 先ほど作ったコントローラを使用できる状態にする(URLに関連付ける)
 - `routes/web.php`
-- `use App\Http\Controllers\SomethingController;`
-- `Route::get('/path-to-page', [SomethingController::class, 'funcName']);`
+- `//use App\Http\Controllers\SomethingController;`
+- `//Route::get('/path-to-page', [SomethingController::class, 'funcName']);`
+- `return view('hoge');`(hoge.blade.phpを表示する) で良い。
 
 ### ページ内容
 
